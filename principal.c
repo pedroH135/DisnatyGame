@@ -98,6 +98,7 @@ int main(){
 
             case 4: {
                 ajustar_recursos_manual(lista);
+                gerar_relatorios_familias(lista_f, lista);
                 salvar_personagens_txt(lista);
                 salvar_governantes_txt(lista);
                 break;
@@ -106,6 +107,7 @@ int main(){
             case 5: {
                 matar_personagem_manual(lista); // 🔥 agora só marca eh_vivo = 0
                 salvar_personagens_txt(lista);
+                gerar_relatorios_familias(lista_f, lista);
                 salvar_mortos_txt(lista);
                 salvar_governantes_txt(lista);
                 break;

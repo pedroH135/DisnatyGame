@@ -575,7 +575,7 @@ void batalha_armada(personagem *lista){
                 hp_a-=4;
                 printf("%s %s atinge %s %s causando %d de dano\n", b->nome, b->sobrenome, a->nome, a->sobrenome, dano);
             }
-            else if(resultado<-200 && resultado<=-300)
+            else if(resultado<-200 && resultado>=-300)
             {
                 dano=5;
                 hp_a-=5;
@@ -1729,8 +1729,8 @@ void salvar_governantes_txt(personagem *lista) {
     (strcmp(p->classe, "Rei") == 0 ||
      strcmp(p->classe, "Duque") == 0)) {
 
-            fprintf(f, "ID: %d | Nome: %s | Idade: %d | Talento: %d | ",
-                    p->id, p->nome, p->idade, p->talento);
+            fprintf(f, "ID: %d | Nome: %s %s | Idade: %d | Talento: %d | ",
+                    p->id, p->nome, p->sobrenome, p->idade, p->talento);
 
             fprintf(f, "Classe: %s(%d) | ",
                     p->classe,
